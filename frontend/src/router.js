@@ -12,6 +12,12 @@ export const routes = [
 		path: '/land-converter',
 		name: 'land-converter',
 		component: LandConverterPage
+	},
+    {
+		path: '/ropani-to-square-feet',
+		name: 'ropani-to-square-feet',
+		component: () =>
+			import('./pages/RopaniToSquareFeetPage.vue')
 	}
 ];
 
