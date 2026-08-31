@@ -49,6 +49,19 @@ useHead({
 
 						<span class="tool-link">Open tool →</span>
 					</RouterLink>
+
+                    <RouterLink class="tool-card" to="/ropani-to-square-feet">
+                        <span class="tool-category">LAND</span>
+
+                        <h3>Ropani to Square Feet</h3>
+
+                        <p>
+                            Convert Ropani to square feet instantly.
+                            1 Ropani equals 5,476 square feet.
+                        </p>
+
+                        <span class="tool-link">Open tool →</span>
+                    </RouterLink>
 				</div>
 			</div>
 		</section>
