@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router';
 import HomePage from './pages/HomePage.vue';
 import LandConverterPage from './pages/LandConverterPage.vue';
 
-const routes = [
+export const routes = [
 	{
 		path: '/',
 		name: 'home',
@@ -15,9 +15,9 @@ const routes = [
 	}
 ];
 
-const router = createRouter({
-	history: createWebHistory(),
+export default createRouter({
+	history: import.meta.env.SSR
+		? createMemoryHistory()
+		: createWebHistory(),
 	routes
 });
-
-export default router;

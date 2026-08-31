@@ -1,6 +1,18 @@
 <script setup>
+import { useHead } from '@unhead/vue';
 import { computed, ref } from 'vue';
 import { convertLand } from '../utils/landConversion.js';
+
+useHead({
+	title: 'Nepal Land Area Converter - Ropani, Aana, Paisa & Daam',
+	meta: [
+		{
+			name: 'description',
+			content:
+				'Convert Ropani, Aana, Paisa, Daam, square feet, square meters, acres and hectares with this free Nepal land area converter.'
+		}
+	],
+});
 
 const units = [
 	{

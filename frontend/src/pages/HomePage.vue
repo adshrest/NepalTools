@@ -1,3 +1,18 @@
+<script setup>
+import { useHead } from '@unhead/vue';
+
+useHead({
+	title: 'NepalTools - Free Online Tools for Nepal',
+	meta: [
+		{
+			name: 'description',
+			content:
+				'Free online calculators, converters and useful tools designed for everyday use in Nepal.'
+		}
+	]
+});
+</script>
+
 <template>
 	<main>
 		<section class="home-hero">
