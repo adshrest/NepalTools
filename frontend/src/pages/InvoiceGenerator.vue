@@ -11,6 +11,38 @@ useHead({
 			content:
 				'Create a professional invoice online for free. Add products or services, calculate totals, discount and VAT, and print your invoice.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/tools/invoice-generator'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Free Invoice Generator',
+				url: 'https://nepaltools.netlify.app/tools/invoice-generator',
+				description:
+					'Create professional invoices with items, discounts and VAT.',
+				applicationCategory: 'BusinessApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

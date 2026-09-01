@@ -1315,25 +1315,36 @@ button {
 
 @media (max-width: 600px) {
 	.site-footer {
-		padding: 22px 12px;
+		padding: 28px 16px;
 	}
 
 	.site-footer p {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+		margin: 0;
 		font-size: 13px;
-		line-height: 2;
+		line-height: 1.5;
 		text-align: center;
 	}
 
-	.footer-separator {
-		display: inline-block;
-		margin: 0 7px;
-		color: #657187;
+	.site-footer .footer-separator {
+		display: none;
 	}
 
 	.site-footer a {
-		display: inline;
+		display: inline-block;
+		max-width: 100%;
 		word-break: break-word;
+	}
+
+	.site-footer p > a[href^="mailto:"] {
+		margin-top: 2px;
+	}
+
+	.site-footer p > a[href^="tel:"] {
+		margin-bottom: 2px;
 	}
 }
 
@@ -1423,9 +1434,25 @@ button {
 	}
 
 	.results-grid {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 10px;
 	}
 
+	.result-card {
+		padding: 16px 12px;
+	}
+
+	.result-value {
+		font-size: 20px;
+	}
+
+	.result-label {
+		font-size: 12px;
+	}
+
+	.copy-button {
+		font-size: 12px;
+	}
 	.tool-grid {
 		grid-template-columns: 1fr;
 	}
@@ -1685,18 +1712,4 @@ button {
 	.contact-details a {
 		min-width: 0;
 	}
-}
-
-.site-footer a {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-.site-footer a:hover {
-	text-decoration: underline;
-}
-
-.footer-separator {
-	margin: 0 12px;
-	color: #657187;
 }

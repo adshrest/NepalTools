@@ -16,6 +16,38 @@ useHead({
 			content:
 				'Free percentage calculator. Calculate percentages, percentage increases and decreases, what percentage one number is of another, and percentage difference.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/percentage-calculator'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Percentage Calculator',
+				url: 'https://nepaltools.netlify.app/percentage-calculator',
+				description:
+					'Calculate percentages, percentage changes, increases, decreases and percentage differences.',
+				applicationCategory: 'UtilitiesApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

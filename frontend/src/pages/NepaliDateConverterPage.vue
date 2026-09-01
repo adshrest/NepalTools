@@ -12,6 +12,38 @@ useHead({
 			content:
 				'Convert Nepali Bikram Sambat dates to English dates and English dates to Nepali dates with this free online date converter.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/nepali-date-converter'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Nepali Date Converter',
+				url: 'https://nepaltools.netlify.app/nepali-date-converter',
+				description:
+					'Convert dates between Nepali Bikram Sambat and English Gregorian calendar dates.',
+				applicationCategory: 'UtilitiesApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

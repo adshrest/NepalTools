@@ -11,6 +11,38 @@ useHead({
 			content:
 				'Calculate your exact age in years, months and days. Free online age calculator from NepalTools.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/age-calculator'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Age Calculator',
+				url: 'https://nepaltools.netlify.app/age-calculator',
+				description:
+					'Calculate exact age in years, months and days, total days and the next birthday.',
+				applicationCategory: 'UtilitiesApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

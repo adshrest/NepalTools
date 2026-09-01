@@ -12,6 +12,38 @@ useHead({
 			content:
 				'Free Nepal land area converter for Ropani, Aana, Paisa, Daam, square feet, square meters, acres and hectares. Convert Nepal land measurements instantly.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/land-converter'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Nepal Land Area Converter',
+				url: 'https://nepaltools.netlify.app/land-converter',
+				description:
+					'Convert Ropani, Aana, Paisa, Daam, square feet, square meters, acres and hectares.',
+				applicationCategory: 'UtilitiesApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

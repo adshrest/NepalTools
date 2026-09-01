@@ -10,6 +10,13 @@ useHead({
 			content:
 				'Privacy Policy for NepalTools. Learn how NepalTools handles information, cookies, analytics and advertising.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/privacy-policy'
+		}
 	]
 });
 </script>

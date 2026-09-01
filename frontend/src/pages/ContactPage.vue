@@ -9,6 +9,13 @@ useHead({
 			content:
 				'Contact NepalTools with questions, suggestions, feedback or corrections about our online calculators and tools.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/contact'
+		}
 	]
 });
 </script>

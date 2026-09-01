@@ -4,11 +4,59 @@ import { useHead } from '@unhead/vue';
 
 useHead({
 	title: 'NepalTools - Free Online Calculators & Converters for Nepal',
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/'
+		}
+	],
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Free online calculators and useful tools for Nepal including land area, salary tax, loans, VAT, fuel cost, currency, dates and invoice generation.'
+				'Free online calculators and converters for Nepal. Calculate land area, salary tax, loans, VAT, fuel costs, percentages, age, currency and more.'
+		},
+		{
+			name: 'robots',
+			content: 'index, follow'
+		},
+		{
+			property: 'og:title',
+			content: 'NepalTools - Free Online Calculators & Converters for Nepal'
+		},
+		{
+			property: 'og:description',
+			content:
+				'Free, simple and useful online calculators and converters made for everyday needs in Nepal.'
+		},
+		{
+			property: 'og:url',
+			content: 'https://nepaltools.netlify.app/'
+		},
+		{
+			property: 'og:type',
+			content: 'website'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebPage',
+				'@id': 'https://nepaltools.netlify.app/#webpage',
+				url: 'https://nepaltools.netlify.app/',
+				name: 'NepalTools - Free Online Calculators & Converters for Nepal',
+				description:
+					'Free online calculators and useful tools for Nepal including land area, salary tax, loans, VAT, fuel cost, currency, dates and invoice generation.',
+				isPartOf: {
+					'@id': 'https://nepaltools.netlify.app/#website'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
 		}
 	]
 });

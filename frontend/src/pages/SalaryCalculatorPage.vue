@@ -12,6 +12,38 @@ useHead({
 			content:
 				'Calculate your annual salary, estimated income tax and monthly take-home salary in Nepal. Free Nepal salary calculator.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/salary-calculator'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Nepal Salary Tax Calculator',
+				url: 'https://nepaltools.netlify.app/salary-calculator',
+				description:
+					'Calculate estimated salary income tax and monthly take-home salary in Nepal.',
+				applicationCategory: 'FinanceApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

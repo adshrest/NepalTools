@@ -13,6 +13,31 @@ useHead({
 			name: 'viewport',
 			content: 'width=device-width, initial-scale=1'
 		}
+	],
+	
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@graph': [
+					{
+						'@type': 'WebSite',
+						'@id': 'https://nepaltools.netlify.app/#website',
+						url: 'https://nepaltools.netlify.app/',
+						name: 'NepalTools',
+						description:
+							'Free online calculators and useful tools for Nepal.'
+					},
+					{
+						'@type': 'Organization',
+						'@id': 'https://nepaltools.netlify.app/#organization',
+						name: 'NepalTools',
+						url: 'https://nepaltools.netlify.app/'
+					}
+				]
+			})
+		}
 	]
 });
 

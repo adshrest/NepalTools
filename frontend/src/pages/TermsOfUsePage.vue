@@ -10,6 +10,13 @@ useHead({
 			content:
 				'Terms of Use for NepalTools. Learn the terms and conditions for using NepalTools calculators, converters and online tools.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/terms-of-use'
+		}
 	]
 });
 </script>

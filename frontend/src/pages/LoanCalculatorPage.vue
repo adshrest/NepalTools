@@ -12,6 +12,38 @@ useHead({
 			content:
 				'Calculate your monthly loan EMI, total interest and total repayment for loans in Nepal. Free online Nepal loan and EMI calculator.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/loan-calculator'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Nepal Loan EMI Calculator',
+				url: 'https://nepaltools.netlify.app/loan-calculator',
+				description:
+					'Calculate monthly EMI, total interest and total loan repayment.',
+				applicationCategory: 'FinanceApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

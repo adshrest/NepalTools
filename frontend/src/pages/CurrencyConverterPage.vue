@@ -14,6 +14,38 @@ useHead({
 			content:
 				'Convert US Dollars to Nepali Rupees instantly. Free USD to NPR converter with an editable exchange rate.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/usd-to-npr'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'USD to NPR Converter',
+				url: 'https://nepaltools.netlify.app/usd-to-npr',
+				description:
+					'Convert US Dollars to Nepali Rupees using a selected exchange rate.',
+				applicationCategory: 'FinanceApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

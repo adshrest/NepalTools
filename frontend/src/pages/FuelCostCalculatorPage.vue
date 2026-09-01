@@ -12,6 +12,38 @@ useHead({
 			content:
 				'Calculate fuel required, fuel cost and cost per kilometer in Nepal. Free petrol and diesel travel cost calculator.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/fuel-cost-calculator'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Fuel Cost Calculator',
+				url: 'https://nepaltools.netlify.app/fuel-cost-calculator',
+				description:
+					'Calculate fuel required, trip fuel cost and cost per kilometer.',
+				applicationCategory: 'UtilitiesApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
+		}
 	]
 });
 

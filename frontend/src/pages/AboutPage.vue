@@ -9,6 +9,13 @@ useHead({
 			content:
 				'Learn about NepalTools, a collection of free online calculators and tools designed for everyday needs in Nepal.'
 		}
+	],
+
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/about'
+		}
 	]
 });
 </script>

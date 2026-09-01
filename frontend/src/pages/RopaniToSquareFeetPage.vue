@@ -7,11 +7,64 @@ const ROPANI_TO_SQUARE_FEET = 5476;
 
 useHead({
 	title: 'Ropani to Square Feet Converter Nepal | NepalTools',
+	link: [
+		{
+			rel: 'canonical',
+			href: 'https://nepaltools.netlify.app/ropani-to-square-feet'
+		}
+	],
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Convert Ropani to square feet in Nepal. 1 Ropani equals 5,476 square feet. See common Ropani conversions and learn how to calculate them.'
+				'Convert Ropani to square feet in Nepal. 1 Ropani equals 5,476 square feet. Use our free converter and see common Ropani to sq ft conversions.'
+		},
+		{
+			name: 'robots',
+			content: 'index, follow'
+		},
+		{
+			property: 'og:title',
+			content: 'Ropani to Square Feet Converter Nepal | NepalTools'
+		},
+		{
+			property: 'og:description',
+			content:
+				'Convert Ropani to square feet instantly. 1 Ropani equals 5,476 square feet using the standard Nepal land measurement conversion.'
+		},
+		{
+			property: 'og:url',
+			content:
+				'https://nepaltools.netlify.app/ropani-to-square-feet'
+		},
+		{
+			property: 'og:type',
+			content: 'website'
+		}
+	],
+
+	script: [
+		{
+			type: 'application/ld+json',
+			children: JSON.stringify({
+				'@context': 'https://schema.org',
+				'@type': 'WebApplication',
+				name: 'Ropani to Square Feet Converter',
+				url: 'https://nepaltools.netlify.app/ropani-to-square-feet',
+				description:
+					'Convert Ropani to square feet using the standard Nepal land measurement conversion.',
+				applicationCategory: 'UtilitiesApplication',
+				operatingSystem: 'Any',
+				isAccessibleForFree: true,
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'NPR'
+				},
+				publisher: {
+					'@id': 'https://nepaltools.netlify.app/#organization'
+				}
+			})
 		}
 	]
 });
