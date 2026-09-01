@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nepaltools.com/sitemap.xml
+Sitemap: https://nepaltools.netlify.app/sitemap.xml

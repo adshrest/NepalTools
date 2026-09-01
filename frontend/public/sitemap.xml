@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 	<url>
-		<loc>https://nepaltools.com/</loc>
+		<loc>https://nepaltools.netlify.app/</loc>
 	</url>
 
 	<url>
-		<loc>https://nepaltools.com/land-converter</loc>
+		<loc>https://nepaltools.netlify.app/land-converter</loc>
 	</url>
 
 	<url>
-		<loc>https://nepaltools.com/ropani-to-square-feet</loc>
+		<loc>https://nepaltools.netlify.app/ropani-to-square-feet</loc>
 	</url>
 
 	<url>
-		<loc>https://nepaltools.com/age-calculator</loc>
+		<loc>https://nepaltools.netlify.app/age-calculator</loc>
 	</url>
 
 	<url>
-		<loc>https://nepaltools.com/salary-calculator</loc>
+		<loc>https://nepaltools.netlify.app/salary-calculator</loc>
 	</url>
+
+	<url>
+		<loc>https://nepaltools.netlify.app/loan-calculator</loc>
+	</url>
+
+	<url>
+		<loc>https://nepaltools.netlify.app/nepali-date-converter</loc>
+	</url>
+
+	<url>
+		<loc>https://nepaltools.netlify.app/fuel-cost-calculator</loc>
+	</url>
+
+	<url>
+		<loc>https://nepaltools.netlify.app/usd-to-npr</loc>
+	</url>
+
+	<url>
+		<loc>https://nepaltools.netlify.app/vat-calculator</loc>
+	</url>
+
+	<url>
+		<loc>https://nepaltools.netlify.app/percentage-calculator</loc>
+	</url>
+
+	<url>
+		<loc>https://nepaltools.netlify.app/tools/invoice-generator</loc>
+	</url>
+
 </urlset>
