@@ -1582,3 +1582,17 @@ button {
 		min-width: 0;
 	}
 }
+
+.site-footer a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.site-footer a:hover {
+	text-decoration: underline;
+}
+
+.footer-separator {
+	margin: 0 12px;
+	color: #657187;
+}

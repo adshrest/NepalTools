@@ -104,9 +104,17 @@ watch(
 
 		<footer class="site-footer">
 			<div class="container">
-				<p>© 2026 NepalTools</p>
+				<p>
+					© 2026 NepalTools
+					<span class="footer-separator">|</span>
+					Email:
+					<a href="mailto:adshrest@gmail.com">adshrest@gmail.com</a>
+					<span class="footer-separator">|</span>
+					Phone:
+					<a href="tel:+9779803906961">+977 9803906961</a>
+				</p>
 			</div>
-		</footer>
+		</footer>	
 	</div>
 </template>
 ```
