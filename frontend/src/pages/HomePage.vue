@@ -62,6 +62,19 @@ useHead({
 
                         <span class="tool-link">Open tool →</span>
                     </RouterLink>
+
+					<RouterLink class="tool-card" to="/age-calculator">
+						<span class="tool-category">EVERYDAY</span>
+
+						<h3>Age Calculator</h3>
+
+						<p>
+							Calculate your exact age in years, months and days,
+							plus total days and your next birthday.
+						</p>
+
+						<span class="tool-link">Open tool →</span>
+					</RouterLink>
 				</div>
 			</div>
 		</section>

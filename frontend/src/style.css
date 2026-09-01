@@ -503,3 +503,137 @@ button {
 		padding: 12px 8px;
 	}
 }
+
+.age-calculator {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 32px;
+	background: #ffffff;
+	border: 1px solid #e2e6ed;
+	border-radius: 20px;
+	box-shadow: 0 16px 50px rgba(23, 32, 51, 0.08);
+}
+
+.date-input-group {
+	margin-bottom: 24px;
+}
+
+.date-input-group label {
+	display: block;
+	margin-bottom: 8px;
+	color: #52627a;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.date-input-group input {
+	width: 100%;
+	height: 56px;
+	padding: 0 14px;
+	border: 1px solid #d5dbe5;
+	border-radius: 10px;
+	font-size: 17px;
+}
+
+.calculator-error {
+	margin: 20px 0;
+	padding: 14px;
+	border-radius: 10px;
+	background: #fff4f4;
+	color: #a33a3a;
+	font-weight: 600;
+}
+
+.age-result {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.result-label {
+	margin-bottom: 12px;
+	color: #657187;
+	font-weight: 600;
+}
+
+.age-main {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.age-main strong {
+	font-size: 42px;
+}
+
+.age-main span {
+	margin-right: 14px;
+	color: #657187;
+}
+
+.age-details {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+	margin-top: 30px;
+}
+
+.age-details div {
+	padding: 18px;
+	border-radius: 12px;
+	background: #f5f7fb;
+}
+
+.age-details span,
+.next-birthday span {
+	display: block;
+	margin-bottom: 6px;
+	color: #657187;
+	font-size: 13px;
+}
+
+.age-details strong {
+	font-size: 22px;
+}
+
+.next-birthday {
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 12px;
+	background: #f5f7fb;
+}
+
+.next-birthday strong {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 20px;
+}
+
+.next-birthday small {
+	color: #657187;
+}
+
+.reset-button {
+	display: block;
+	margin: 24px auto 0;
+	padding: 10px 20px;
+	border: 1px solid #d5dbe5;
+	border-radius: 8px;
+	background: #ffffff;
+	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+	.age-calculator {
+		padding: 20px;
+	}
+
+	.age-main strong {
+		font-size: 34px;
+	}
+
+	.age-details {
+		grid-template-columns: 1fr;
+	}
+}

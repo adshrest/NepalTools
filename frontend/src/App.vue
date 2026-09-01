@@ -1,3 +1,4 @@
+```vue
 <template>
 	<div class="app">
 		<header class="site-header">
@@ -9,8 +10,17 @@
 
 				<nav class="site-nav">
 					<RouterLink to="/">Home</RouterLink>
+
 					<RouterLink to="/land-converter">
 						Land Converter
+					</RouterLink>
+
+					<RouterLink to="/ropani-to-square-feet">
+						Ropani → Sq Ft
+					</RouterLink>
+
+					<RouterLink to="/age-calculator">
+						Age Calculator
 					</RouterLink>
 				</nav>
 			</div>
@@ -25,3 +35,4 @@
 		</footer>
 	</div>
 </template>
+```

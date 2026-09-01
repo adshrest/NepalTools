@@ -18,6 +18,12 @@ export const routes = [
 		name: 'ropani-to-square-feet',
 		component: () =>
 			import('./pages/RopaniToSquareFeetPage.vue')
+	},
+	{
+		path: '/age-calculator',
+		name: 'age-calculator',
+		component: () =>
+			import('./pages/AgeCalculatorPage.vue')
 	}
 ];
 
