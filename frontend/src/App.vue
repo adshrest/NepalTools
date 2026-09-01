@@ -44,6 +44,10 @@ watch(
 				<nav class="site-nav">
 					<RouterLink to="/">Home</RouterLink>
 
+					<RouterLink to="/about">About</RouterLink>
+
+					<RouterLink to="/contact">Contact Us</RouterLink>
+
 					<div class="tools-menu">
 						<button class="tools-menu-button" type="button">
 							Tools
@@ -112,6 +116,14 @@ watch(
 					<span class="footer-separator">|</span>
 					Phone:
 					<a href="tel:+9779803906961">+977 9803906961</a>
+					<span class="footer-separator">|</span>
+					<RouterLink to="/about">About</RouterLink>
+					<span class="footer-separator">|</span>
+					<RouterLink to="/privacy-policy">Privacy Policy</RouterLink>
+					<span class="footer-separator">|</span>
+					<RouterLink to="/terms-of-use">Terms of Use</RouterLink>
+					<span class="footer-separator">|</span>
+					<RouterLink to="/contact">Contact Us</RouterLink>
 				</p>
 			</div>
 		</footer>	

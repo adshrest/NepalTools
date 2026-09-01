@@ -8,6 +8,10 @@ import CurrencyConverterPage from './pages/CurrencyConverterPage.vue';
 import VATCalculator from './pages/VATCalculator.vue';
 import PercentageCalculator from './pages/PercentageCalculator.vue';
 import InvoiceGenerator from './pages/InvoiceGenerator.vue';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage.vue';
+import TermsOfUsePage from './pages/TermsOfUsePage.vue';
+import AboutPage from './pages/AboutPage.vue';
+import ContactPage from './pages/ContactPage.vue';
 
 export const routes = [
 	{
@@ -73,7 +77,27 @@ export const routes = [
 		path: '/tools/invoice-generator',
 		name: 'invoice-generator',
 		component: InvoiceGenerator
-	}
+	},
+	{
+		path: '/privacy-policy',
+		name: 'privacy-policy',
+		component: PrivacyPolicyPage
+	},
+	{
+		path: '/terms-of-use',
+		name: 'terms-of-use',
+		component: TermsOfUsePage
+	},
+	{
+		path: '/about',
+		name: 'about',
+		component: AboutPage
+	},
+	{
+		path: '/contact',
+		name: 'contact',
+		component: ContactPage
+	},
 ];
 
 export default createRouter({

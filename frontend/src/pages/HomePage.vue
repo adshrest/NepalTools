@@ -19,7 +19,7 @@ useHead({
 		<!-- HERO -->
 		<section class="home-hero">
 			<div class="container">
-				<p class="eyebrow">NEPALTOOLS</p>
+				<h3>NepalTools</h3>
 
 				<h1>Free Online Calculators & Tools for Nepal</h1>
 
