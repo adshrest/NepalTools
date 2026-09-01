@@ -369,31 +369,6 @@ function resetCalculator() {
 					</details>
 				</div>
 
-				<h2>More NepalTools</h2>
-
-				<div class="related-links">
-					<RouterLink
-						class="secondary-button"
-						to="/salary-calculator"
-					>
-						Salary Calculator
-					</RouterLink>
-
-					<RouterLink
-						class="secondary-button"
-						to="/age-calculator"
-					>
-						Age Calculator
-					</RouterLink>
-
-					<RouterLink
-						class="secondary-button"
-						to="/"
-					>
-						All Tools
-					</RouterLink>
-				</div>
-
 				<p class="disclaimer">
 					This tool provides mathematical unit conversion only.
 					For legal property boundaries, ownership records or

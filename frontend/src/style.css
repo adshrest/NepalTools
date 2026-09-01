@@ -389,6 +389,7 @@ button {
 	background: #ffffff;
 	color: #52627a;
 	font-weight: 700;
+	margin-top: 10px;
 }
 
 .reset-button:hover {
@@ -421,6 +422,9 @@ button {
 	border-radius: 10px;
 	text-decoration: none;
 	font-weight: 700;
+	background: #172033;
+	color: #ffffff;
+
 }
 
 .secondary-button:hover {

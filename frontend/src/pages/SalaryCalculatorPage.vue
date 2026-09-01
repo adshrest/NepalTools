@@ -289,33 +289,6 @@ function reset() {
 						</p>
 					</details>
 				</div>
-
-				<div class="related-tools">
-					<h2>More NepalTools</h2>
-
-					<div class="related-links">
-						<RouterLink
-							class="secondary-button"
-							to="/land-converter"
-						>
-							Land Area Converter
-						</RouterLink>
-
-						<RouterLink
-							class="secondary-button"
-							to="/age-calculator"
-						>
-							Age Calculator
-						</RouterLink>
-
-						<RouterLink
-							class="secondary-button"
-							to="/ropani-to-square-feet"
-						>
-							Ropani to Square Feet
-						</RouterLink>
-					</div>
-				</div>
 			</div>
 		</section>
 	</main>

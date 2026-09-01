@@ -253,29 +253,6 @@ function resetCalculator() {
 					insurance, taxes, rounding and other loan terms. Always
 					confirm the final repayment schedule with your lender.
 				</p>
-
-				<div class="related-links">
-					<RouterLink
-						class="secondary-button"
-						to="/land-converter"
-					>
-						Land Converter
-					</RouterLink>
-
-					<RouterLink
-						class="secondary-button"
-						to="/salary-calculator"
-					>
-						Salary Calculator
-					</RouterLink>
-
-					<RouterLink
-						class="secondary-button"
-						to="/age-calculator"
-					>
-						Age Calculator
-					</RouterLink>
-				</div>
 			</div>
 		</section>
 	</main>
