@@ -879,3 +879,89 @@ button {
 .vat-mode input {
 	margin: 0;
 }
+
+.percentage-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.percentage-card {
+	padding: 28px;
+	background: #ffffff;
+	border: 1px solid #e2e6ed;
+	border-radius: 16px;
+	box-shadow: 0 12px 35px rgba(23, 32, 51, 0.06);
+}
+
+.percentage-card h2 {
+	margin: 0 0 24px;
+	font-size: 21px;
+}
+
+.percentage-input {
+	margin-bottom: 18px;
+}
+
+.percentage-input label {
+	display: block;
+	margin-bottom: 8px;
+	color: #52627a;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.percentage-input input {
+	width: 100%;
+	height: 52px;
+	padding: 0 14px;
+	border: 1px solid #d5dbe5;
+	border-radius: 10px;
+	outline: none;
+}
+
+.percentage-input input:focus {
+	border-color: #52627a;
+	box-shadow: 0 0 0 3px rgba(82, 98, 122, 0.12);
+}
+
+.percentage-result {
+	margin-top: 24px;
+	padding: 20px;
+	border-radius: 12px;
+	background: #f5f7fb;
+	text-align: center;
+}
+
+.percentage-result span {
+	display: block;
+	margin-bottom: 8px;
+	color: #657187;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.percentage-result strong {
+	display: block;
+	font-size: 28px;
+}
+
+.percentage-result small {
+	display: block;
+	margin-top: 6px;
+	color: #657187;
+	font-weight: 700;
+}
+
+.percentage-reset {
+	display: block;
+	width: auto;
+	margin: 24px auto 0;
+	padding: 10px 24px;
+}
+
+@media (max-width: 760px) {
+	.percentage-grid {
+		grid-template-columns: 1fr;
+	}
+}

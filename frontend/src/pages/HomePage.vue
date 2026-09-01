@@ -156,6 +156,22 @@ useHead({
 
 						<span class="tool-link">Calculate VAT →</span>
 					</RouterLink>
+
+					<RouterLink
+						class="tool-card"
+						to="/percentage-calculator"
+					>
+						<span class="tool-category">CALCULATOR</span>
+
+						<h3>Percentage Calculator</h3>
+
+						<p>
+							Calculate percentages, percentage changes, increases,
+							decreases and percentage differences.
+						</p>
+
+						<span class="tool-link">Calculate Percentage →</span>
+					</RouterLink>
 				</div>
 			</div>
 		</section>

@@ -69,6 +69,10 @@ useHead({
 							<RouterLink to="/vat-calculator">
 								VAT Calculator
 							</RouterLink>
+
+							<RouterLink to="/percentage-calculator">
+								Percentage Calculator
+							</RouterLink>
 						</div>
 					</div>
 				</nav>

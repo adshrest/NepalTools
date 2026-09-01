@@ -5,6 +5,7 @@ import NepaliDateConverterPage from './pages/NepaliDateConverterPage.vue';
 import FuelCostCalculatorPage from './pages/FuelCostCalculatorPage.vue';
 import CurrencyConverterPage from './pages/CurrencyConverterPage.vue';
 import VATCalculator from './pages/VATCalculator.vue';
+import PercentageCalculator from './pages/PercentageCalculator.vue';
 
 export const routes = [
 	{
@@ -60,6 +61,11 @@ export const routes = [
 		path: '/vat-calculator',
 		name: 'vat-calculator',
 		component: VATCalculator
+	},
+	{
+		path: '/percentage-calculator',
+		name: 'percentage-calculator',
+		component: PercentageCalculator
 	},
 ];
 
