@@ -172,6 +172,21 @@ useHead({
 
 						<span class="tool-link">Calculate Percentage →</span>
 					</RouterLink>
+
+					<RouterLink
+						class="tool-card"
+						to="/tools/invoice-generator"
+					>
+						<span class="tool-category">BUSINESS</span>
+
+						<h3>Invoice Generator</h3>
+
+						<p>
+							Create a professional invoice with items, discount and VAT.
+						</p>
+
+						<span class="tool-link">Open tool →</span>
+					</RouterLink>
 				</div>
 			</div>
 		</section>

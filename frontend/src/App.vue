@@ -73,6 +73,10 @@ useHead({
 							<RouterLink to="/percentage-calculator">
 								Percentage Calculator
 							</RouterLink>
+
+							<RouterLink to="/tools/invoice-generator">
+								Invoice Generator
+							</RouterLink>
 						</div>
 					</div>
 				</nav>

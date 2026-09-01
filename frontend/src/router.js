@@ -6,6 +6,7 @@ import FuelCostCalculatorPage from './pages/FuelCostCalculatorPage.vue';
 import CurrencyConverterPage from './pages/CurrencyConverterPage.vue';
 import VATCalculator from './pages/VATCalculator.vue';
 import PercentageCalculator from './pages/PercentageCalculator.vue';
+import InvoiceGenerator from './pages/InvoiceGenerator.vue';
 
 export const routes = [
 	{
@@ -67,6 +68,11 @@ export const routes = [
 		name: 'percentage-calculator',
 		component: PercentageCalculator
 	},
+	{
+		path: '/tools/invoice-generator',
+		name: 'invoice-generator',
+		component: InvoiceGenerator
+	}
 ];
 
 export default createRouter({

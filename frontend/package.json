@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@unhead/vue": "^3.4.0",
+    "html2pdf.js": "^0.14.0",
     "nepali-date-converter": "^3.4.0",
     "vue": "^3.5.41",
     "vue-router": "^5.3.0"

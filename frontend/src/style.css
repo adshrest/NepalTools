@@ -10,14 +10,21 @@
 	box-sizing: border-box;
 }
 
+html,
 body {
 	margin: 0;
+	padding: 0;
 	min-width: 320px;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 button,
 input,
-select {
+select,
+textarea {
 	font: inherit;
 }
 
@@ -34,6 +41,10 @@ button {
 	margin: 0 auto;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 .site-header {
 	background: #ffffff;
 	border-bottom: 1px solid #e6e9ef;
@@ -42,7 +53,8 @@ button {
 .header-content {
 	display: flex;
 	align-items: center;
-	height: 72px;
+	min-height: 72px;
+	padding: 10px 0;
 }
 
 .brand {
@@ -66,8 +78,113 @@ button {
 	font-size: 12px;
 }
 
+/* =========================
+   NAVIGATION
+========================= */
+
+.site-nav {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	margin-left: auto;
+}
+
+.site-nav a {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.site-nav a:hover {
+	color: #172033;
+}
+
+.site-nav a.router-link-active {
+	color: #172033;
+}
+
+.tools-menu {
+	position: relative;
+}
+
+.tools-menu-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: #000000;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.tools-menu-button span {
+	font-size: 0.8rem;
+	transition: transform 0.2s ease;
+}
+
+.tools-menu:hover .tools-menu-button span,
+.tools-menu:focus-within .tools-menu-button span {
+	transform: rotate(180deg);
+}
+
+.tools-dropdown {
+	position: absolute;
+	top: calc(100% + 10px);
+	right: 0;
+	min-width: 220px;
+	padding: 8px;
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 12px;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-6px);
+	transition:
+		opacity 0.2s ease,
+		transform 0.2s ease,
+		visibility 0.2s ease;
+	z-index: 100;
+}
+
+.tools-menu:hover .tools-dropdown,
+.tools-menu:focus-within .tools-dropdown {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.tools-dropdown a {
+	display: block;
+	padding: 10px 12px;
+	border-radius: 8px;
+	color: #172033;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.tools-dropdown a:hover {
+	background: #f3f4f6;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
 	padding: 72px 0 48px;
+	text-align: center;
+}
+
+.home-hero {
+	padding: 100px 0 80px;
 	text-align: center;
 }
 
@@ -87,7 +204,7 @@ button {
 .hero h1 {
 	margin: 0;
 	font-size: clamp(34px, 6vw, 56px);
-	line-height: 1.05;
+	line-height: 1.1;
 	letter-spacing: -0.04em;
 }
 
@@ -98,6 +215,10 @@ button {
 	font-size: 18px;
 	line-height: 1.6;
 }
+
+/* =========================
+   GENERAL CALCULATOR
+========================= */
 
 .calculator-section {
 	padding-bottom: 48px;
@@ -144,16 +265,6 @@ button {
 .input-section select:focus {
 	border-color: #52627a;
 	box-shadow: 0 0 0 3px rgba(82, 98, 122, 0.12);
-}
-
-.reset-button {
-	width: 100%;
-	height: 46px;
-	border: 1px solid #d5dbe5;
-	border-radius: 10px;
-	background: #ffffff;
-	color: #52627a;
-	font-weight: 700;
 }
 
 .results-section {
@@ -215,6 +326,10 @@ button {
 	color: #7a8699;
 }
 
+/* =========================
+   INFORMATION
+========================= */
+
 .information-section {
 	padding: 0 0 64px;
 }
@@ -229,6 +344,10 @@ button {
 .information-card h2 {
 	margin: 0 0 12px;
 	font-size: 24px;
+}
+
+.information-card h2:not(:first-child) {
+	margin-top: 40px;
 }
 
 .information-card p {
@@ -252,112 +371,23 @@ button {
 	font-size: 13px;
 }
 
-.site-footer {
-	padding: 24px 0;
-	background: #172033;
-	color: #ffffff;
-}
+/* =========================
+   BUTTONS
+========================= */
 
-.site-footer p {
-	margin: 0;
-	font-size: 13px;
-}
-
-@media (max-width: 760px) {
-	.hero {
-		padding: 48px 0 32px;
-	}
-
-	.calculator-card {
-		grid-template-columns: 1fr;
-	}
-
-	.input-section {
-		border-right: 0;
-		border-bottom: 1px solid #e2e6ed;
-	}
-
-	.results-grid {
-		grid-template-columns: 1fr;
-	}
-}
-
-.site-nav {
-	display: flex;
-	align-items: center;
-	gap: 24px;
-	margin-left: auto;
-}
-
-.site-nav a {
-	color: black;
-	font-size: 14px;
+.reset-button {
+	display: block;
+	height: 46px;
+	padding: 0 20px;
+	border: 1px solid #d5dbe5;
+	border-radius: 10px;
+	background: #ffffff;
+	color: #52627a;
 	font-weight: 700;
-	text-decoration: none;
 }
 
-.tools-menu-button {
-	display: inline-flex;
-	align-items: center;
-	padding: 0;
-	border: 0;
-	background: transparent;
-	color: black;
-	font-family: inherit;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: normal;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-.tools-menu {
-	position: relative;
-}
-
-.tools-menu-button span {
-	font-size: 0.8em;
-	transition: transform 0.2s ease;
-}
-
-.tools-menu:hover .tools-menu-button span {
-	transform: rotate(180deg);
-}
-
-.tools-dropdown {
-	position: absolute;
-	top: calc(100% + 0.75rem);
-	right: 0;
-	min-width: 220px;
-	padding: 0.5rem;
-	background: white;
-	border: 1px solid #e5e7eb;
-	border-radius: 12px;
-	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-	opacity: 0;
-	visibility: hidden;
-	transform: translateY(-6px);
-	transition:
-		opacity 0.2s ease,
-		transform 0.2s ease,
-		visibility 0.2s ease;
-	z-index: 100;
-}
-
-.tools-menu:hover .tools-dropdown,
-.tools-menu:focus-within .tools-dropdown {
-	opacity: 1;
-	visibility: visible;
-	transform: translateY(0);
-}
-
-.site-nav a.router-link-active {
-	color: #172033;
-}
-
-.home-hero {
-	padding: 100px 0 80px;
-	text-align: center;
+.reset-button:hover {
+	background: #f5f7fb;
 }
 
 .primary-button {
@@ -367,12 +397,34 @@ button {
 	height: 48px;
 	margin-top: 28px;
 	padding: 0 22px;
+	border: 0;
 	border-radius: 10px;
 	background: #172033;
 	color: #ffffff;
 	font-weight: 700;
 	text-decoration: none;
 }
+
+.primary-button:hover {
+	background: #27334a;
+}
+
+.secondary-button {
+	display: inline-block;
+	padding: 12px 18px;
+	border: 1px solid #d5dbe5;
+	border-radius: 10px;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.secondary-button:hover {
+	text-decoration: none;
+}
+
+/* =========================
+   TOOLS HOME
+========================= */
 
 .tools-section {
 	padding-bottom: 80px;
@@ -397,7 +449,9 @@ button {
 	background: #ffffff;
 	color: #172033;
 	text-decoration: none;
-	transition: transform 0.15s ease, box-shadow 0.15s ease;
+	transition:
+		transform 0.15s ease,
+		box-shadow 0.15s ease;
 }
 
 .tool-card:hover {
@@ -428,19 +482,9 @@ button {
 	font-weight: 800;
 }
 
-@media (max-width: 760px) {
-	.site-nav {
-		display: none;
-	}
-
-	.home-hero {
-		padding: 64px 0 48px;
-	}
-
-	.tool-grid {
-		grid-template-columns: 1fr;
-	}
-}
+/* =========================
+   SIMPLE CONVERTER
+========================= */
 
 .simple-converter {
 	max-width: 760px;
@@ -513,6 +557,10 @@ button {
 	padding: 0 20px;
 }
 
+/* =========================
+   TABLES
+========================= */
+
 .conversion-table {
 	width: 100%;
 	margin: 24px 0 40px;
@@ -540,24 +588,9 @@ button {
 	font-weight: 800;
 }
 
-.information-card h2:not(:first-child) {
-	margin-top: 40px;
-}
-
-@media (max-width: 600px) {
-	.simple-converter {
-		padding: 20px;
-	}
-
-	.simple-converter-result strong {
-		font-size: 28px;
-	}
-
-	.conversion-table th,
-	.conversion-table td {
-		padding: 12px 8px;
-	}
-}
+/* =========================
+   AGE CALCULATOR
+========================= */
 
 .age-calculator {
 	max-width: 760px;
@@ -602,12 +635,6 @@ button {
 .age-result {
 	margin-top: 30px;
 	text-align: center;
-}
-
-.result-label {
-	margin-bottom: 12px;
-	color: #657187;
-	font-weight: 600;
 }
 
 .age-main {
@@ -669,29 +696,9 @@ button {
 	color: #657187;
 }
 
-.reset-button {
-	display: block;
-	margin: 24px auto 0;
-	padding: 10px 20px;
-	border: 1px solid #d5dbe5;
-	border-radius: 8px;
-	background: #ffffff;
-	cursor: pointer;
-}
-
-@media (max-width: 600px) {
-	.age-calculator {
-		padding: 20px;
-	}
-
-	.age-main strong {
-		font-size: 34px;
-	}
-
-	.age-details {
-		grid-template-columns: 1fr;
-	}
-}
+/* =========================
+   SALARY CALCULATOR
+========================= */
 
 .salary-calculator {
 	max-width: 760px;
@@ -749,12 +756,6 @@ button {
 	text-align: center;
 }
 
-.result-label {
-	margin-bottom: 8px;
-	color: #657187;
-	font-weight: 600;
-}
-
 .take-home {
 	display: block;
 	font-size: 38px;
@@ -792,19 +793,9 @@ button {
 	text-align: center;
 }
 
-@media (max-width: 600px) {
-	.salary-calculator {
-		padding: 20px;
-	}
-
-	.take-home {
-		font-size: 32px;
-	}
-
-	.salary-summary {
-		grid-template-columns: 1fr;
-	}
-}
+/* =========================
+   FAQ
+========================= */
 
 .faq-list {
 	margin-top: 20px;
@@ -824,6 +815,10 @@ button {
 	margin-bottom: 0;
 }
 
+/* =========================
+   RELATED TOOLS
+========================= */
+
 .related-tools {
 	margin-top: 36px;
 }
@@ -834,31 +829,9 @@ button {
 	gap: 12px;
 }
 
-.secondary-button {
-	display: inline-block;
-	padding: 12px 18px;
-	border: 1px solid #d5dbe5;
-	border-radius: 10px;
-	text-decoration: none;
-	font-weight: 700;
-}
-
-.secondary-button:hover {
-	text-decoration: none;
-}
-
-.tools-dropdown a {
-	display: block;
-	padding: 0.65rem 0.75rem;
-	border-radius: 8px;
-	color: inherit;
-	text-decoration: none;
-	white-space: nowrap;
-}
-
-.tools-dropdown a:hover {
-	background: #f3f4f6;
-}
+/* =========================
+   VAT
+========================= */
 
 .vat-mode {
 	display: flex;
@@ -879,6 +852,10 @@ button {
 .vat-mode input {
 	margin: 0;
 }
+
+/* =========================
+   PERCENTAGE
+========================= */
 
 .percentage-grid {
 	display: grid;
@@ -960,8 +937,518 @@ button {
 	padding: 10px 24px;
 }
 
+/* =========================
+   INVOICE EDITOR
+========================= */
+
+.invoice-editor {
+	margin-bottom: 24px;
+	padding: 32px;
+	background: #ffffff;
+	border: 1px solid #e2e6ed;
+	border-radius: 20px;
+	box-shadow: 0 16px 50px rgba(23, 32, 51, 0.08);
+}
+
+.invoice-section {
+	padding: 28px 0;
+	border-bottom: 1px solid #e2e6ed;
+}
+
+.invoice-section:first-child {
+	padding-top: 0;
+}
+
+.invoice-section:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.invoice-section h2 {
+	margin: 0 0 20px;
+	font-size: 20px;
+	line-height: 1.35;
+}
+
+.invoice-form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+}
+
+.invoice-full {
+	grid-column: 1 / -1;
+}
+
+.invoice-field label,
+.invoice-notes-label {
+	display: block;
+	margin-bottom: 8px;
+	color: #52627a;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.invoice-field input,
+.invoice-section textarea {
+	width: 100%;
+	padding: 0 14px;
+	border: 1px solid #d5dbe5;
+	border-radius: 10px;
+	outline: none;
+	background: #ffffff;
+	color: #172033;
+}
+
+.invoice-field input {
+	height: 50px;
+}
+
+.invoice-section textarea {
+	padding-top: 12px;
+	resize: vertical;
+}
+
+.invoice-field input:focus,
+.invoice-section textarea:focus {
+	border-color: #52627a;
+	box-shadow: 0 0 0 3px rgba(82, 98, 122, 0.12);
+}
+
+.invoice-section-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	margin-bottom: 20px;
+}
+
+.invoice-section-header h2 {
+	margin: 0;
+}
+
+.invoice-items {
+	overflow-x: auto;
+}
+
+.invoice-item-header,
+.invoice-item-row {
+	display: grid;
+	grid-template-columns: minmax(180px, 2fr) 90px 120px 140px 80px;
+	gap: 10px;
+	align-items: center;
+	min-width: 700px;
+}
+
+.invoice-item-header {
+	margin-bottom: 8px;
+	color: #657187;
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.invoice-item-row {
+	margin-bottom: 10px;
+}
+
+.invoice-item-row input {
+	width: 100%;
+	height: 46px;
+	padding: 0 10px;
+	border: 1px solid #d5dbe5;
+	border-radius: 8px;
+	outline: none;
+}
+
+.invoice-item-row strong {
+	font-size: 14px;
+}
+
+.remove-item-button {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: #a33a3a;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+/* =========================
+   INVOICE PREVIEW
+========================= */
+
+.invoice-preview {
+	padding: 40px;
+	overflow: visible;
+	background: #ffffff;
+	border: 1px solid #e2e6ed;
+	border-radius: 20px;
+	box-shadow: 0 16px 50px rgba(23, 32, 51, 0.08);
+}
+
+.invoice-preview-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 30px;
+	padding: 0 0 28px;
+	border-bottom: 2px solid #172033;
+	overflow: visible;
+}
+
+.invoice-title-block {
+	display: block;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+.invoice-label {
+	display: block;
+	margin: 0 0 10px;
+	padding: 0;
+	color: #52627a;
+	font-size: 12px;
+	font-weight: 800;
+	line-height: 1.5;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.invoice-title-block h2 {
+	display: block;
+	margin: 0 0 10px;
+	padding: 0;
+	color: #172033;
+	font-size: 28px;
+	font-weight: 800;
+	line-height: 1.3;
+	letter-spacing: -0.02em;
+	overflow: visible;
+}
+
+.invoice-preview-header p {
+	margin: 4px 0;
+	color: #657187;
+	line-height: 1.5;
+}
+
+.invoice-meta {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 6px;
+}
+
+.invoice-meta strong {
+	font-size: 18px;
+	line-height: 1.3;
+}
+
+.invoice-meta span {
+	color: #657187;
+	font-size: 14px;
+	line-height: 1.4;
+}
+
+.invoice-customer {
+	margin: 28px 0;
+}
+
+.invoice-customer span {
+	display: block;
+	margin-bottom: 6px;
+	color: #657187;
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.invoice-customer strong {
+	display: block;
+	font-size: 17px;
+}
+
+.invoice-customer p {
+	margin: 4px 0;
+	color: #657187;
+}
+
+.invoice-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.invoice-table th,
+.invoice-table td {
+	padding: 14px 10px;
+	border-bottom: 1px solid #e2e6ed;
+	text-align: left;
+}
+
+.invoice-table th {
+	color: #52627a;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.invoice-table th:not(:first-child),
+.invoice-table td:not(:first-child) {
+	text-align: right;
+}
+
+.invoice-totals {
+	max-width: 360px;
+	margin: 24px 0 0 auto;
+}
+
+.invoice-totals div {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 8px 0;
+	color: #657187;
+}
+
+.invoice-totals strong {
+	color: #172033;
+}
+
+.invoice-grand-total {
+	margin-top: 8px;
+	padding-top: 16px !important;
+	border-top: 2px solid #172033;
+	color: #172033 !important;
+	font-size: 18px;
+}
+
+.invoice-notes {
+	margin-top: 32px;
+	padding-top: 20px;
+	border-top: 1px solid #e2e6ed;
+}
+
+.invoice-notes p {
+	margin: 8px 0 0;
+	color: #657187;
+	white-space: pre-wrap;
+}
+
+/* =========================
+   INVOICE BUTTONS
+========================= */
+
+.invoice-actions {
+	margin-top: 24px;
+	text-align: center;
+}
+
+.invoice-actions > .reset-button {
+	display: block;
+	width: auto;
+	min-width: 100px;
+	margin: 0 auto 16px;
+	padding: 0 22px;
+}
+
+.invoice-export-actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+
+.invoice-export-actions .primary-button {
+	width: 180px;
+	margin: 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+	padding: 24px 0;
+	background: #172033;
+	color: #ffffff;
+}
+
+.site-footer p {
+	margin: 0;
+	font-size: 13px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 760px) {
+	.container {
+		width: min(100% - 24px, 1100px);
+	}
+
+	.hero {
+		padding: 48px 0 32px;
+	}
+
+	.home-hero {
+		padding: 64px 0 48px;
+	}
+
+	.site-nav {
+		display: none;
+	}
+
+	.calculator-card {
+		grid-template-columns: 1fr;
+	}
+
+	.input-section {
+		border-right: 0;
+		border-bottom: 1px solid #e2e6ed;
+	}
+
+	.results-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.tool-grid {
+		grid-template-columns: 1fr;
+	}
+
 	.percentage-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.invoice-form-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.invoice-full {
+		grid-column: auto;
+	}
+
+	.invoice-preview {
+		margin-top: 8px;
+		padding: 32px 24px 24px;
+	}
+
+	.invoice-preview-header {
+		flex-direction: column;
+	}
+
+	.invoice-meta {
+		align-items: flex-start;
+	}
+
+	.invoice-export-actions {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.invoice-export-actions .primary-button {
+		width: min(100%, 240px);
+	}
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+	.simple-converter,
+	.age-calculator,
+	.salary-calculator {
+		padding: 20px;
+	}
+
+	.simple-converter-result strong {
+		font-size: 28px;
+	}
+
+	.conversion-table th,
+	.conversion-table td {
+		padding: 12px 8px;
+	}
+
+	.age-main strong {
+		font-size: 34px;
+	}
+
+	.age-details {
+		grid-template-columns: 1fr;
+	}
+
+	.take-home {
+		font-size: 32px;
+	}
+
+	.salary-summary {
+		grid-template-columns: 1fr;
+	}
+
+	.invoice-editor {
+		padding: 20px;
+	}
+
+	.invoice-preview {
+		padding: 28px 18px 20px;
+	}
+
+	.invoice-title-block h2 {
+		font-size: 25px;
+	}
+
+	.invoice-table {
+		font-size: 13px;
+	}
+
+	.invoice-table th,
+	.invoice-table td {
+		padding: 10px 6px;
+	}
+
+	.invoice-totals {
+		max-width: 100%;
+	}
+}
+
+/* =========================
+   PRINT
+========================= */
+
+@media print {
+	.site-header,
+	.site-footer,
+	.hero,
+	.invoice-editor,
+	.invoice-actions {
+		display: none !important;
+	}
+
+	html,
+	body {
+		background: #ffffff;
+	}
+
+	body {
+		overflow: visible;
+	}
+
+	.calculator-section {
+		padding: 0;
+	}
+
+	.invoice-preview {
+		margin: 0;
+		padding: 20px 0 0;
+		border: 0;
+		box-shadow: none;
+		border-radius: 0;
+	}
+
+	.invoice-preview-header h2 {
+		font-size: 28px;
 	}
 }
