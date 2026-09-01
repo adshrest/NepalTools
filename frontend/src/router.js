@@ -1,4 +1,5 @@
 import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router';
+
 import HomePage from './pages/HomePage.vue';
 import LandConverterPage from './pages/LandConverterPage.vue';
 import NepaliDateConverterPage from './pages/NepaliDateConverterPage.vue';
@@ -19,7 +20,7 @@ export const routes = [
 		name: 'land-converter',
 		component: LandConverterPage
 	},
-    {
+	{
 		path: '/ropani-to-square-feet',
 		name: 'ropani-to-square-feet',
 		component: () =>
@@ -40,7 +41,7 @@ export const routes = [
 	{
 		path: '/loan-calculator',
 		name: 'loan-calculator',
-		component: () => 
+		component: () =>
 			import('./pages/LoanCalculatorPage.vue')
 	},
 	{
@@ -55,7 +56,7 @@ export const routes = [
 	},
 	{
 		path: '/usd-to-npr',
-		name : 'usd-to-npr',
+		name: 'usd-to-npr',
 		component: CurrencyConverterPage
 	},
 	{
@@ -79,5 +80,12 @@ export default createRouter({
 	history: import.meta.env.SSR
 		? createMemoryHistory()
 		: createWebHistory(),
-	routes
+
+	routes,
+
+	scrollBehavior() {
+		return {
+			top: 0
+		};
+	}
 });

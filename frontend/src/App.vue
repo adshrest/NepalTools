@@ -1,5 +1,7 @@
 ```vue
 <script setup>
+import { nextTick, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import { useHead } from '@unhead/vue';
 
 useHead({
@@ -13,6 +15,21 @@ useHead({
 		}
 	]
 });
+
+const route = useRoute();
+
+watch(
+	() => route.fullPath,
+	async () => {
+		await nextTick();
+
+		window.scrollTo(0, 0);
+
+		requestAnimationFrame(() => {
+			window.scrollTo(0, 0);
+		});
+	}
+);
 </script>
 
 <template>
@@ -45,21 +62,21 @@ useHead({
 							<RouterLink to="/age-calculator">
 								Age Calculator
 							</RouterLink>
-							
+
 							<RouterLink to="/salary-calculator">
 								Salary Calculator
 							</RouterLink>
 
-							<RouterLink to="/loan-calculator"> 
-								Loan Calculator 
+							<RouterLink to="/loan-calculator">
+								Loan Calculator
 							</RouterLink>
 
 							<RouterLink to="/nepali-date-converter">
 								Nepali Date
 							</RouterLink>
 
-							<RouterLink to="/fuel-cost-calculator"> 
-								Fuel Cost 
+							<RouterLink to="/fuel-cost-calculator">
+								Fuel Cost
 							</RouterLink>
 
 							<RouterLink to="/usd-to-npr">
