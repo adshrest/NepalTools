@@ -1452,3 +1452,124 @@ button {
 		font-size: 28px;
 	}
 }
+
+/* =========================
+   HOMEPAGE ENHANCEMENTS
+========================= */
+
+.home-hero .primary-button {
+	margin-top: 28px;
+}
+
+.tools-section {
+	scroll-margin-top: 20px;
+}
+
+.why-nepaltools {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 16px;
+	margin-top: 32px;
+	padding-top: 28px;
+	border-top: 1px solid #e2e6ed;
+}
+
+.why-nepaltools div {
+	padding: 18px;
+	border-radius: 12px;
+	background: #f5f7fb;
+}
+
+.why-nepaltools strong {
+	display: block;
+	margin-bottom: 6px;
+	font-size: 15px;
+}
+
+.why-nepaltools span {
+	display: block;
+	color: #657187;
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.contact-section {
+	padding: 0 0 80px;
+}
+
+.contact-card {
+	padding: 40px 32px;
+	background: #ffffff;
+	border: 1px solid #e2e6ed;
+	border-radius: 20px;
+	box-shadow: 0 16px 50px rgba(23, 32, 51, 0.06);
+	text-align: center;
+}
+
+.contact-card .eyebrow {
+	margin-bottom: 10px;
+}
+
+.contact-card h2 {
+	margin: 0 0 12px;
+	font-size: 26px;
+}
+
+.contact-card > p:not(.eyebrow) {
+	max-width: 600px;
+	margin: 0 auto;
+	color: #657187;
+	line-height: 1.6;
+}
+
+.contact-details {
+	display: flex;
+	justify-content: center;
+	gap: 16px;
+	margin-top: 28px;
+}
+
+.contact-details a {
+	display: flex;
+	flex-direction: column;
+	min-width: 220px;
+	padding: 18px 22px;
+	border: 1px solid #e2e6ed;
+	border-radius: 12px;
+	background: #f5f7fb;
+	color: #172033;
+	text-decoration: none;
+}
+
+.contact-details a:hover {
+	border-color: #cbd2dd;
+}
+
+.contact-details strong {
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+.contact-details span {
+	color: #52627a;
+	font-size: 14px;
+}
+
+/* =========================
+   HOMEPAGE MOBILE
+========================= */
+
+@media (max-width: 760px) {
+	.why-nepaltools {
+		grid-template-columns: 1fr;
+	}
+
+	.contact-details {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.contact-details a {
+		min-width: 0;
+	}
+}

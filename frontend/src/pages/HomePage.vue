@@ -1,3 +1,4 @@
+```vue
 <script setup>
 import { useHead } from '@unhead/vue';
 
@@ -7,7 +8,7 @@ useHead({
 		{
 			name: 'description',
 			content:
-				'Free Nepal calculators and converters including land area, Ropani to square feet, salary and age calculators.'
+				'Free online calculators and useful tools for Nepal including land area, salary tax, loans, VAT, fuel cost, currency, dates and invoice generation.'
 		}
 	]
 });
@@ -15,6 +16,7 @@ useHead({
 
 <template>
 	<main>
+		<!-- HERO -->
 		<section class="home-hero">
 			<div class="container">
 				<p class="eyebrow">NEPALTOOLS</p>
@@ -23,18 +25,19 @@ useHead({
 
 				<p class="hero-description">
 					Free, simple and useful calculators for everyday life in Nepal.
-					Calculate land area, salary, age and more.
+					Calculate land area, salary, loans, VAT, fuel costs and more.
 				</p>
 
-				<RouterLink class="primary-button" to="/land-converter">
-					Land Area Converter
-				</RouterLink>
+				<a class="primary-button" href="#tools">
+					Browse Tools
+				</a>
 			</div>
 		</section>
 
-		<section class="tools-section">
+		<!-- TOOLS -->
+		<section id="tools" class="tools-section">
 			<div class="container">
-				<h2>Tools</h2>
+				<h2>Free Tools</h2>
 
 				<div class="tool-grid">
 					<RouterLink class="tool-card" to="/land-converter">
@@ -50,18 +53,18 @@ useHead({
 						<span class="tool-link">Open tool →</span>
 					</RouterLink>
 
-                    <RouterLink class="tool-card" to="/ropani-to-square-feet">
-                        <span class="tool-category">LAND</span>
+					<RouterLink class="tool-card" to="/ropani-to-square-feet">
+						<span class="tool-category">LAND</span>
 
-                        <h3>Ropani to Square Feet</h3>
+						<h3>Ropani to Square Feet</h3>
 
-                        <p>
-                            Convert Ropani to square feet instantly.
-                            1 Ropani equals 5,476 square feet.
-                        </p>
+						<p>
+							Convert Ropani to square feet instantly.
+							1 Ropani equals 5,476 square feet.
+						</p>
 
-                        <span class="tool-link">Open tool →</span>
-                    </RouterLink>
+						<span class="tool-link">Open tool →</span>
+					</RouterLink>
 
 					<RouterLink class="tool-card" to="/age-calculator">
 						<span class="tool-category">EVERYDAY</span>
@@ -79,7 +82,7 @@ useHead({
 					<RouterLink class="tool-card" to="/salary-calculator">
 						<span class="tool-category">MONEY</span>
 
-						<h3>Salary Calculator</h3>
+						<h3>Salary Tax Calculator</h3>
 
 						<p>
 							Estimate your annual income, income tax and monthly
@@ -141,10 +144,7 @@ useHead({
 						<span class="tool-link">Open tool →</span>
 					</RouterLink>
 
-					<RouterLink
-						class="tool-card"
-						to="/vat-calculator"
-					>
+					<RouterLink class="tool-card" to="/vat-calculator">
 						<span class="tool-category">TAX</span>
 
 						<h3>Nepal VAT Calculator</h3>
@@ -157,10 +157,7 @@ useHead({
 						<span class="tool-link">Calculate VAT →</span>
 					</RouterLink>
 
-					<RouterLink
-						class="tool-card"
-						to="/percentage-calculator"
-					>
+					<RouterLink class="tool-card" to="/percentage-calculator">
 						<span class="tool-category">CALCULATOR</span>
 
 						<h3>Percentage Calculator</h3>
@@ -173,10 +170,7 @@ useHead({
 						<span class="tool-link">Calculate Percentage →</span>
 					</RouterLink>
 
-					<RouterLink
-						class="tool-card"
-						to="/tools/invoice-generator"
-					>
+					<RouterLink class="tool-card" to="/tools/invoice-generator">
 						<span class="tool-category">BUSINESS</span>
 
 						<h3>Invoice Generator</h3>
@@ -191,22 +185,69 @@ useHead({
 			</div>
 		</section>
 
+		<!-- ABOUT -->
 		<section class="information-section">
 			<div class="container information-card">
 				<h2>Free tools made for Nepal</h2>
 
 				<p>
-					NepalTools provides simple online calculators and converters
+					NepalTools provides simple online calculators and useful tools
 					for everyday needs in Nepal. Convert traditional land
 					measurements such as Ropani, Aana, Paisa and Daam, calculate
-					your age, or estimate your salary and income tax.
+					your age, estimate salary and income tax, calculate loan
+					payments, VAT and fuel costs, or create an invoice for your
+					business.
 				</p>
 
 				<p>
-					Our tools are designed to be fast, easy to use and accessible
+					Our tools are designed to be fast, simple and easy to use
 					from phones and computers without installing an app.
 				</p>
+
+				<div class="why-nepaltools">
+					<div>
+						<strong>Free to use</strong>
+						<span>No registration required.</span>
+					</div>
+
+					<div>
+						<strong>Made for Nepal</strong>
+						<span>Built around everyday Nepali needs.</span>
+					</div>
+
+					<div>
+						<strong>Simple</strong>
+						<span>Easy to understand and use.</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT -->
+		<section class="contact-section">
+			<div class="container contact-card">
+				<p class="eyebrow">CONTACT</p>
+
+				<h2>Have a suggestion?</h2>
+
+				<p>
+					Found an error, have an idea for a new calculator, or want
+					to get in touch with us?
+				</p>
+
+				<div class="contact-details">
+					<a href="mailto:adshrest@gmail.com">
+						<strong>Email</strong>
+						<span>adshrest@gmail.com</span>
+					</a>
+
+					<a href="tel:+9779803906961">
+						<strong>Phone</strong>
+						<span>+977 9803906961</span>
+					</a>
+				</div>
 			</div>
 		</section>
 	</main>
 </template>
+```
