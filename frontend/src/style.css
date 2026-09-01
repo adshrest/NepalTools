@@ -1305,10 +1305,25 @@ button {
 		padding: 64px 0 48px;
 	}
 
-	.site-nav {
-		display: none;
+	.header-content {
+		flex-wrap: wrap;
+		gap: 12px;
 	}
 
+	.site-nav {
+		display: flex;
+		width: 100%;
+		margin-left: 0;
+		justify-content: center;
+		gap: 16px;
+		flex-wrap: wrap;
+	}
+
+	.site-nav a,
+	.tools-menu-button {
+		font-size: 13px;
+	}
+	
 	.calculator-card {
 		grid-template-columns: 1fr;
 	}
