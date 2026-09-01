@@ -27,33 +27,50 @@ useHead({
 				<nav class="site-nav">
 					<RouterLink to="/">Home</RouterLink>
 
-					<RouterLink to="/land-converter">
-						Land Converter
-					</RouterLink>
+					<div class="tools-menu">
+						<button class="tools-menu-button" type="button">
+							Tools
+							<span aria-hidden="true">▾</span>
+						</button>
 
-					<RouterLink to="/ropani-to-square-feet">
-						Ropani → Sq Ft
-					</RouterLink>
+						<div class="tools-dropdown">
+							<RouterLink to="/land-converter">
+								Land Converter
+							</RouterLink>
 
-					<RouterLink to="/age-calculator">
-						Age Calculator
-					</RouterLink>
-					
-					<RouterLink to="/salary-calculator">
-						Salary Calculator
-					</RouterLink>
+							<RouterLink to="/ropani-to-square-feet">
+								Ropani → Sq Ft
+							</RouterLink>
 
-					<RouterLink to="/loan-calculator"> 
-						Loan Calculator 
-					</RouterLink>
+							<RouterLink to="/age-calculator">
+								Age Calculator
+							</RouterLink>
+							
+							<RouterLink to="/salary-calculator">
+								Salary Calculator
+							</RouterLink>
 
-					<RouterLink to="/nepali-date-converter">
-						Nepali Date
-					</RouterLink>
+							<RouterLink to="/loan-calculator"> 
+								Loan Calculator 
+							</RouterLink>
 
-					<RouterLink to="/fuel-cost-calculator"> 
-						Fuel Cost 
-					</RouterLink>
+							<RouterLink to="/nepali-date-converter">
+								Nepali Date
+							</RouterLink>
+
+							<RouterLink to="/fuel-cost-calculator"> 
+								Fuel Cost 
+							</RouterLink>
+
+							<RouterLink to="/usd-to-npr">
+								USD → NPR
+							</RouterLink>
+
+							<RouterLink to="/vat-calculator">
+								VAT Calculator
+							</RouterLink>
+						</div>
+					</div>
 				</nav>
 			</div>
 		</header>

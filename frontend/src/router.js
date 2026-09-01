@@ -3,6 +3,8 @@ import HomePage from './pages/HomePage.vue';
 import LandConverterPage from './pages/LandConverterPage.vue';
 import NepaliDateConverterPage from './pages/NepaliDateConverterPage.vue';
 import FuelCostCalculatorPage from './pages/FuelCostCalculatorPage.vue';
+import CurrencyConverterPage from './pages/CurrencyConverterPage.vue';
+import VATCalculator from './pages/VATCalculator.vue';
 
 export const routes = [
 	{
@@ -48,7 +50,17 @@ export const routes = [
 		path: '/fuel-cost-calculator',
 		name: 'fuel-cost-calculator',
 		component: FuelCostCalculatorPage
-	}
+	},
+	{
+		path: '/usd-to-npr',
+		name : 'usd-to-npr',
+		component: CurrencyConverterPage
+	},
+	{
+		path: '/vat-calculator',
+		name: 'vat-calculator',
+		component: VATCalculator
+	},
 ];
 
 export default createRouter({

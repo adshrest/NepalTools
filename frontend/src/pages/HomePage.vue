@@ -127,6 +127,35 @@ useHead({
 
 						<span class="tool-link">Open tool →</span>
 					</RouterLink>
+
+					<RouterLink class="tool-card" to="/usd-to-npr">
+						<span class="tool-category">MONEY</span>
+
+						<h3>USD to NPR Converter</h3>
+
+						<p>
+							Convert US Dollars to Nepali Rupees using your chosen
+							exchange rate.
+						</p>
+
+						<span class="tool-link">Open tool →</span>
+					</RouterLink>
+
+					<RouterLink
+						class="tool-card"
+						to="/vat-calculator"
+					>
+						<span class="tool-category">TAX</span>
+
+						<h3>Nepal VAT Calculator</h3>
+
+						<p>
+							Calculate 13% VAT, add VAT to prices, or remove VAT from
+							VAT-inclusive amounts.
+						</p>
+
+						<span class="tool-link">Calculate VAT →</span>
+					</RouterLink>
 				</div>
 			</div>
 		</section>
