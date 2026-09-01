@@ -22,6 +22,10 @@
 					<RouterLink to="/age-calculator">
 						Age Calculator
 					</RouterLink>
+					
+					<RouterLink to="/salary-calculator">
+						Salary Calculator
+					</RouterLink>
 				</nav>
 			</div>
 		</header>

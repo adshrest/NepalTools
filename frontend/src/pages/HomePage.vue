@@ -75,6 +75,19 @@ useHead({
 
 						<span class="tool-link">Open tool →</span>
 					</RouterLink>
+
+					<RouterLink class="tool-card" to="/salary-calculator">
+						<span class="tool-category">MONEY</span>
+
+						<h3>Salary Calculator</h3>
+
+						<p>
+							Estimate your annual income, income tax and monthly
+							take-home salary in Nepal.
+						</p>
+
+						<span class="tool-link">Open tool →</span>
+					</RouterLink>
 				</div>
 			</div>
 		</section>

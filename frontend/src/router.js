@@ -24,6 +24,12 @@ export const routes = [
 		name: 'age-calculator',
 		component: () =>
 			import('./pages/AgeCalculatorPage.vue')
+	},
+	{
+		path: '/salary-calculator',
+		name: 'salary-calculator',
+		component: () =>
+			import('./pages/SalaryCalculatorPage.vue')
 	}
 ];
 
