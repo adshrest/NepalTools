@@ -1,6 +1,8 @@
 import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router';
 import HomePage from './pages/HomePage.vue';
 import LandConverterPage from './pages/LandConverterPage.vue';
+import NepaliDateConverterPage from './pages/NepaliDateConverterPage.vue';
+import FuelCostCalculatorPage from './pages/FuelCostCalculatorPage.vue';
 
 export const routes = [
 	{
@@ -30,6 +32,22 @@ export const routes = [
 		name: 'salary-calculator',
 		component: () =>
 			import('./pages/SalaryCalculatorPage.vue')
+	},
+	{
+		path: '/loan-calculator',
+		name: 'loan-calculator',
+		component: () => 
+			import('./pages/LoanCalculatorPage.vue')
+	},
+	{
+		path: '/nepali-date-converter',
+		name: 'nepali-date-converter',
+		component: NepaliDateConverterPage
+	},
+	{
+		path: '/fuel-cost-calculator',
+		name: 'fuel-cost-calculator',
+		component: FuelCostCalculatorPage
 	}
 ];
 

@@ -42,6 +42,18 @@ useHead({
 					<RouterLink to="/salary-calculator">
 						Salary Calculator
 					</RouterLink>
+
+					<RouterLink to="/loan-calculator"> 
+						Loan Calculator 
+					</RouterLink>
+
+					<RouterLink to="/nepali-date-converter">
+						Nepali Date
+					</RouterLink>
+
+					<RouterLink to="/fuel-cost-calculator"> 
+						Fuel Cost 
+					</RouterLink>
 				</nav>
 			</div>
 		</header>

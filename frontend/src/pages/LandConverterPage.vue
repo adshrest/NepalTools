@@ -1,17 +1,18 @@
+```vue
 <script setup>
-import { useHead } from '@unhead/vue';
 import { computed, ref } from 'vue';
+import { useHead } from '@unhead/vue';
 import { convertLand } from '../utils/landConversion.js';
 
 useHead({
-	title: 'Nepal Land Area Converter - Ropani, Aana, Paisa & Daam',
+	title: 'Nepal Land Area Converter | Ropani, Aana, Paisa & Daam',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Convert Ropani, Aana, Paisa, Daam, square feet, square meters, acres and hectares with this free Nepal land area converter.'
+				'Free Nepal land area converter for Ropani, Aana, Paisa, Daam, square feet, square meters, acres and hectares. Convert Nepal land measurements instantly.'
 		}
-	],
+	]
 });
 
 const units = [
@@ -151,8 +152,8 @@ function resetCalculator() {
 				<h1>Nepal Land Area Converter</h1>
 
 				<p class="hero-description">
-					Convert Ropani, Aana, Paisa, Daam and international area
-					units instantly.
+					Convert Ropani, Aana, Paisa, Daam, square feet, square
+					meters, acres and hectares instantly.
 				</p>
 			</div>
 		</section>
@@ -198,6 +199,7 @@ function resetCalculator() {
 						<div class="results-header">
 							<div>
 								<p class="results-label">CONVERTED RESULTS</p>
+
 								<h2>Your land area</h2>
 							</div>
 						</div>
@@ -242,11 +244,13 @@ function resetCalculator() {
 
 		<section class="information-section">
 			<div class="container information-card">
-				<h2>Nepal land measurement</h2>
+				<h2>Nepal land measurement units</h2>
 
 				<p>
-					The traditional Ropani system is commonly expressed using
-					Ropani, Aana, Paisa and Daam.
+					Nepal commonly uses traditional land measurements such
+					as Ropani, Aana, Paisa and Daam. These units can also be
+					converted into international units such as square feet
+					and square meters.
 				</p>
 
 				<div class="conversion-chain">
@@ -259,13 +263,145 @@ function resetCalculator() {
 					<span>256 Daam</span>
 				</div>
 
+				<h2>Common Nepal land conversions</h2>
+
+				<table class="conversion-table">
+					<thead>
+						<tr>
+							<th>Unit</th>
+							<th>Equivalent in Square Feet</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1 Ropani</td>
+							<td>5,476 sq ft</td>
+						</tr>
+
+						<tr>
+							<td>1 Aana</td>
+							<td>342.25 sq ft</td>
+						</tr>
+
+						<tr>
+							<td>1 Paisa</td>
+							<td>85.5625 sq ft</td>
+						</tr>
+
+						<tr>
+							<td>1 Daam</td>
+							<td>21.390625 sq ft</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2>How to use the land converter</h2>
+
+				<p>
+					Enter the land area, select the unit you are starting
+					with, and the converter will automatically calculate
+					the equivalent value in all supported units.
+				</p>
+
+				<p>
+					For example, entering 1 Ropani shows the equivalent
+					amount in Aana, Paisa, Daam, square feet, square meters,
+					acres and hectares.
+				</p>
+
+				<h2>Ropani to square feet</h2>
+
+				<p>
+					One Ropani is equal to 5,476 square feet. If you only
+					need a Ropani to square feet conversion, use our
+					dedicated converter.
+				</p>
+
+				<RouterLink
+					class="primary-button"
+					to="/ropani-to-square-feet"
+				>
+					Ropani to Square Feet Converter
+				</RouterLink>
+
+				<h2>Frequently asked questions</h2>
+
+				<div class="faq-list">
+					<details>
+						<summary>
+							How many Aana are in 1 Ropani?
+						</summary>
+
+						<p>
+							1 Ropani contains 16 Aana.
+						</p>
+					</details>
+
+					<details>
+						<summary>
+							How many Paisa are in 1 Ropani?
+						</summary>
+
+						<p>
+							1 Ropani contains 64 Paisa.
+						</p>
+					</details>
+
+					<details>
+						<summary>
+							How many Daam are in 1 Ropani?
+						</summary>
+
+						<p>
+							1 Ropani contains 256 Daam.
+						</p>
+					</details>
+
+					<details>
+						<summary>
+							How many square feet are in 1 Ropani?
+						</summary>
+
+						<p>
+							1 Ropani is equal to 5,476 square feet.
+						</p>
+					</details>
+				</div>
+
+				<h2>More NepalTools</h2>
+
+				<div class="related-links">
+					<RouterLink
+						class="secondary-button"
+						to="/salary-calculator"
+					>
+						Salary Calculator
+					</RouterLink>
+
+					<RouterLink
+						class="secondary-button"
+						to="/age-calculator"
+					>
+						Age Calculator
+					</RouterLink>
+
+					<RouterLink
+						class="secondary-button"
+						to="/"
+					>
+						All Tools
+					</RouterLink>
+				</div>
+
 				<p class="disclaimer">
-					This tool provides mathematical unit conversion only. For
-					legal property boundaries, ownership records or official
-					land measurements, verify the information against official
-					documents and qualified professionals.
+					This tool provides mathematical unit conversion only.
+					For legal property boundaries, ownership records or
+					official land measurements, verify the information
+					against official documents and qualified professionals.
 				</p>
 			</div>
 		</section>
 	</main>
 </template>
+```

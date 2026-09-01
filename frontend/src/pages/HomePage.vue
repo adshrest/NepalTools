@@ -88,6 +88,45 @@ useHead({
 
 						<span class="tool-link">Open tool →</span>
 					</RouterLink>
+
+					<RouterLink class="tool-card" to="/loan-calculator">
+						<span class="tool-category">FINANCE</span>
+
+						<h3>Loan / EMI Calculator</h3>
+
+						<p>
+							Calculate monthly EMI, total interest and total repayment
+							for your loan.
+						</p>
+
+						<span class="tool-link">Open tool →</span>
+					</RouterLink>
+
+					<RouterLink class="tool-card" to="/nepali-date-converter">
+						<span class="tool-category">DATE</span>
+
+						<h3>Nepali Date Converter</h3>
+
+						<p>
+							Convert Nepali Bikram Sambat dates to English dates
+							and English dates to Nepali dates.
+						</p>
+
+						<span class="tool-link">Open tool →</span>
+					</RouterLink>
+
+					<RouterLink class="tool-card" to="/fuel-cost-calculator">
+						<span class="tool-category">EVERYDAY</span>
+
+						<h3>Fuel Cost Calculator</h3>
+
+						<p>
+							Calculate fuel required, total fuel cost and cost per
+							kilometer for your trip.
+						</p>
+
+						<span class="tool-link">Open tool →</span>
+					</RouterLink>
 				</div>
 			</div>
 		</section>
