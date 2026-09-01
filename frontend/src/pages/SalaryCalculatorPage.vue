@@ -1,15 +1,16 @@
+```vue
 <script setup>
 import { computed, ref } from 'vue';
 import { useHead } from '@unhead/vue';
 import { calculateSalary } from '../utils/salaryTax.js';
 
 useHead({
-	title: 'Nepal Salary Calculator - Take Home Salary | NepalTools',
+	title: 'Nepal Salary Calculator & Tax Calculator | NepalTools',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Calculate annual salary, estimated income tax and monthly take-home salary in Nepal.'
+				'Calculate your annual salary, estimated income tax and monthly take-home salary in Nepal. Free Nepal salary calculator.'
 		}
 	]
 });
@@ -56,13 +57,13 @@ function reset() {
 	<main>
 		<section class="hero">
 			<div class="container">
-				<p class="eyebrow">MONEY TOOL</p>
+				<p class="eyebrow">NEPAL MONEY CALCULATOR</p>
 
 				<h1>Nepal Salary Calculator</h1>
 
 				<p class="hero-description">
-					Calculate your annual salary, estimated income tax
-					and monthly take-home salary.
+					Estimate your annual income, income tax and monthly
+					take-home salary in Nepal.
 				</p>
 			</div>
 		</section>
@@ -183,10 +184,10 @@ function reset() {
 					</button>
 
 					<p class="calculator-note">
-						This is an estimate based on the tax rules
-						implemented by NepalTools. Actual tax may differ
-						depending on deductions, SSF, EPF, CIT, rebates,
-						and individual circumstances.
+						This calculator provides an estimate. Actual
+						tax may differ depending on applicable
+						deductions, contributions, rebates and individual
+						circumstances.
 					</p>
 				</div>
 			</div>
@@ -194,23 +195,129 @@ function reset() {
 
 		<section class="information-section">
 			<div class="container information-card">
-				<h2>How to use the salary calculator</h2>
+				<h2>How the Nepal salary calculator works</h2>
 
 				<p>
-					Enter your monthly salary. You can also enter an
-					annual bonus or other annual income to estimate your
-					total annual income and take-home salary.
+					Enter your monthly salary to estimate your annual
+					income, estimated income tax and monthly take-home
+					pay. You can also include an annual bonus or other
+					annual income.
 				</p>
 
-				<h2>Important</h2>
+				<h2>Annual salary calculation</h2>
 
 				<p>
-					The result is an estimate and should not be treated
-					as an official tax calculation. Your actual tax can
-					change based on applicable deductions, contributions,
-					rebates and other circumstances.
+					Your basic annual salary is calculated by multiplying
+					your monthly salary by 12.
 				</p>
+
+				<p class="formula">
+					Annual salary = Monthly salary × 12
+				</p>
+
+				<h2>Monthly take-home salary</h2>
+
+				<p>
+					Your estimated take-home amount is calculated by
+					subtracting estimated annual income tax from your
+					gross annual income and dividing the result by 12.
+				</p>
+
+				<p class="formula">
+					Monthly take-home = (Annual income − Estimated tax) ÷ 12
+				</p>
+
+				<h2>Salary calculator example</h2>
+
+				<p>
+					For example, if your monthly salary is Rs. 50,000,
+					your annual salary before other income or deductions
+					is Rs. 600,000.
+				</p>
+
+				<h2>Frequently asked questions</h2>
+
+				<div class="faq-list">
+					<details>
+						<summary>
+							How do I calculate my annual salary in Nepal?
+						</summary>
+
+						<p>
+							Multiply your monthly salary by 12. For
+							example, a monthly salary of Rs. 50,000
+							gives an annual salary of Rs. 600,000 before
+							bonus, other income or deductions.
+						</p>
+					</details>
+
+					<details>
+						<summary>
+							What is take-home salary?
+						</summary>
+
+						<p>
+							Take-home salary is the amount you receive
+							after applicable taxes and other deductions.
+							The exact amount depends on your individual
+							employment and deduction details.
+						</p>
+					</details>
+
+					<details>
+						<summary>
+							Does this calculator include bonuses?
+						</summary>
+
+						<p>
+							Yes. You can enter an annual bonus separately
+							and include it in the estimated gross annual
+							income.
+						</p>
+					</details>
+
+					<details>
+						<summary>
+							Is this an official Nepal tax calculator?
+						</summary>
+
+						<p>
+							No. NepalTools is an independent calculator.
+							It provides an estimate and should not replace
+							calculation by your employer, tax adviser or
+							the Inland Revenue Department.
+						</p>
+					</details>
+				</div>
+
+				<div class="related-tools">
+					<h2>More NepalTools</h2>
+
+					<div class="related-links">
+						<RouterLink
+							class="secondary-button"
+							to="/land-converter"
+						>
+							Land Area Converter
+						</RouterLink>
+
+						<RouterLink
+							class="secondary-button"
+							to="/age-calculator"
+						>
+							Age Calculator
+						</RouterLink>
+
+						<RouterLink
+							class="secondary-button"
+							to="/ropani-to-square-feet"
+						>
+							Ropani to Square Feet
+						</RouterLink>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
 </template>
+```

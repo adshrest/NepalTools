@@ -2,12 +2,12 @@
 import { useHead } from '@unhead/vue';
 
 useHead({
-	title: 'NepalTools - Free Online Tools for Nepal',
+	title: 'NepalTools - Free Online Calculators & Converters for Nepal',
 	meta: [
 		{
 			name: 'description',
 			content:
-				'Free online calculators, converters and useful tools designed for everyday use in Nepal.'
+				'Free Nepal calculators and converters including land area, Ropani to square feet, salary and age calculators.'
 		}
 	]
 });
@@ -19,11 +19,11 @@ useHead({
 			<div class="container">
 				<p class="eyebrow">NEPALTOOLS</p>
 
-				<h1>Useful online tools for Nepal</h1>
+				<h1>Free Online Calculators & Tools for Nepal</h1>
 
 				<p class="hero-description">
-					Simple, free calculators and converters designed for
-					everyday use in Nepal.
+					Free, simple and useful calculators for everyday life in Nepal.
+					Calculate land area, salary, age and more.
 				</p>
 
 				<RouterLink class="primary-button" to="/land-converter">
@@ -89,6 +89,24 @@ useHead({
 						<span class="tool-link">Open tool →</span>
 					</RouterLink>
 				</div>
+			</div>
+		</section>
+
+		<section class="information-section">
+			<div class="container information-card">
+				<h2>Free tools made for Nepal</h2>
+
+				<p>
+					NepalTools provides simple online calculators and converters
+					for everyday needs in Nepal. Convert traditional land
+					measurements such as Ropani, Aana, Paisa and Daam, calculate
+					your age, or estimate your salary and income tax.
+				</p>
+
+				<p>
+					Our tools are designed to be fast, easy to use and accessible
+					from phones and computers without installing an app.
+				</p>
 			</div>
 		</section>
 	</main>
